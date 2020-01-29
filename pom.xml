@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>guru.nidi</groupId>
+        <artifactId>guru-nidi-parent-pom</artifactId>
+        <version>1.1.27</version>
+        <relativePath />
+    </parent>
+
+    <artifactId>3d-viewer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>A simple viewer for 3D objects.</description>
+    <url>https://github.com/nidi3/3d-viewer</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <properties>
+        <dependency-check.fail-on-error>false</dependency-check.fail-on-error>
+    </properties>
+
+    <modules>
+        <module>3d-viewer-standalone</module>
+    </modules>
+
+    <scm>
+        <connection>scm:git:https://github.com/nidi3/3d-viewer</connection>
+        <developerConnection>scm:git:https://github.com/nidi3/3d-viewer</developerConnection>
+        <url>https://github.com/nidi3/3d-viewer</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <dependencies>
+    </dependencies>
+</project>
