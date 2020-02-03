@@ -9,7 +9,7 @@
         <relativePath />
     </parent>
 
-    <artifactId>3d-viewer</artifactId>
+    <artifactId>3d-viewer-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -23,6 +23,7 @@
     </properties>
 
     <modules>
+        <module>3d-viewer</module>
         <module>3d-viewer-standalone</module>
     </modules>
 
