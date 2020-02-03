@@ -15,6 +15,7 @@
  */
 package guru.nidi.objviewer
 
+import com.sun.nio.file.SensitivityWatchEventModifier
 import java.io.File
 import java.nio.file.*
 import kotlin.concurrent.thread
@@ -32,7 +33,7 @@ class FileWatcher {
     fun watch(file: File, notify: (File) -> Unit) {
         if (file.toPath().parent != this.file?.parent) {
             key?.cancel()
-            key = file.toPath().parent.register(watcher, StandardWatchEventKinds.ENTRY_MODIFY)
+            key = file.toPath().parent.register(watcher, arrayOf(StandardWatchEventKinds.ENTRY_MODIFY), SensitivityWatchEventModifier.HIGH)
         }
         this.file = file.toPath()
         this.notify = notify
